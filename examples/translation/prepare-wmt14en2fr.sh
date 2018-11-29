@@ -17,26 +17,17 @@ BPE_TOKENS=40000
 
 URLS=(
     "http://statmt.org/wmt13/training-parallel-europarl-v7.tgz"
-    "http://statmt.org/wmt13/training-parallel-commoncrawl.tgz"
-    "http://statmt.org/wmt13/training-parallel-un.tgz"
-    "http://statmt.org/wmt14/training-parallel-nc-v9.tgz"
-    "http://statmt.org/wmt10/training-giga-fren.tar"
+    "http://www.statmt.org/wmt15/training-parallel-nc-v10.tgz"
     "http://statmt.org/wmt14/test-full.tgz"
 )
 FILES=(
     "training-parallel-europarl-v7.tgz"
-    "training-parallel-commoncrawl.tgz"
-    "training-parallel-un.tgz"
-    "training-parallel-nc-v9.tgz"
-    "training-giga-fren.tar"
+    "training-parallel-nc-v10.tgz"
     "test-full.tgz"
 )
 CORPORA=(
     "training/europarl-v7.fr-en"
-    "commoncrawl.fr-en"
-    "un/undoc.2000.fr-en"
-    "training/news-commentary-v9.fr-en"
-    "giga-fren.release2.fixed"
+    "news-commentary-v10.fr-en"
 )
 
 if [ ! -d "$SCRIPTS" ]; then
@@ -76,7 +67,6 @@ for ((i=0;i<${#URLS[@]};++i)); do
     fi
 done
 
-gunzip giga-fren.release2.fixed.*.gz
 cd ..
 
 echo "pre-processing train data..."
