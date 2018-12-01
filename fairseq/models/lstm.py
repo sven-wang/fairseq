@@ -524,15 +524,15 @@ def lstm_luong_wmt_en_de(args):
     base_architecture(args)
 
 
-@register_model_architecture('lstm', 'lstm_baseline')
-def lstm_luong_wmt_en_de(args):
-    args.encoder_embed_dim = getattr(args, 'encoder_embed_dim', 512)
+@register_model_architecture('lstm', 'lstm_baseline1024')
+def lstm_baseline1024(args):
+    args.encoder_embed_dim = getattr(args, 'encoder_embed_dim', 1024)
     args.encoder_dropout_out = getattr(args, 'encoder_dropout_out', 0.3)
     args.encoder_layers = getattr(args, 'encoder_layers', 2)
     args.encoder_bidirectional = getattr(args, 'encoder_bidirectional', False)
-    args.decoder_embed_dim = getattr(args, 'decoder_embed_dim', 512)
+    args.decoder_embed_dim = getattr(args, 'decoder_embed_dim', 1024)
     args.decoder_layers = getattr(args, 'decoder_layers', 2)
-    args.decoder_out_embed_dim = getattr(args, 'decoder_out_embed_dim', 512)
+    args.decoder_out_embed_dim = getattr(args, 'decoder_out_embed_dim', 1024)
     args.decoder_dropout_out = getattr(args, 'decoder_dropout_out', 0.3)
     args.share_decoder_input_output_embed = getattr(args, 'share_decoder_input_output_embed', True)
     base_architecture(args)
