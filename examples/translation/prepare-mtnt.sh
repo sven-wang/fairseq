@@ -17,6 +17,9 @@ prep=wmt14_en_fr/mtnt
 tmp=$prep/tmp
 orig=orig/mtnt/en-fr
 
+mkdir $prep
+mkdir $tmp
+
 for L in $src $tgt; do
     for f in train.$L valid.$L test.$L; do
         echo "tokenizing ${f}..."
