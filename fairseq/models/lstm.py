@@ -551,7 +551,7 @@ def lstm_baseline1024(args):
 @register_model_architecture('lstm', 'bilstm_baseline1024')
 def bilstm_baseline1024(args):
     args.dropout = getattr(args, 'dropout', 0.3)
-    args.encoder_embed_dim = getattr(args, 'encoder_embed_dim', 1024)
+    args.encoder_embed_dim = getattr(args, 'encoder_embed_dim', 512)
     args.encoder_layers = getattr(args, 'encoder_layers', 2)
     args.encoder_bidirectional = getattr(args, 'encoder_bidirectional', True)
     args.decoder_embed_dim = getattr(args, 'decoder_embed_dim', 1024)
