@@ -547,3 +547,15 @@ def lstm_baseline1024(args):
     args.decoder_out_embed_dim = getattr(args, 'decoder_out_embed_dim', 1024)
     args.share_decoder_input_output_embed = getattr(args, 'share_decoder_input_output_embed', True)
     base_architecture(args)
+
+@register_model_architecture('lstm', 'bilstm_baseline1024')
+def bilstm_baseline1024(args):
+    args.dropout = getattr(args, 'dropout', 0.3)
+    args.encoder_embed_dim = getattr(args, 'encoder_embed_dim', 1024)
+    args.encoder_layers = getattr(args, 'encoder_layers', 2)
+    args.encoder_bidirectional = getattr(args, 'encoder_bidirectional', True)
+    args.decoder_embed_dim = getattr(args, 'decoder_embed_dim', 1024)
+    args.decoder_layers = getattr(args, 'decoder_layers', 2)
+    args.decoder_out_embed_dim = getattr(args, 'decoder_out_embed_dim', 1024)
+    args.share_decoder_input_output_embed = getattr(args, 'share_decoder_input_output_embed', True)
+    base_architecture(args)
