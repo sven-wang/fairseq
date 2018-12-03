@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SCRIPTS=example/translation/mosesdecoder/scripts
+SCRIPTS=examples/translation/mosesdecoder/scripts
 DETOKENIZER=$SCRIPTS/tokenizer/detokenizer.perl
 lang=en
 
